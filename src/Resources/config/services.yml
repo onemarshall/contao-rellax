@@ -1,0 +1,3 @@
+services:
+  rellax.listener.hooks:
+    class: onemarshall\RellaxBundle\EventListener\HookListener

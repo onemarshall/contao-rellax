@@ -1,0 +1,9 @@
+<?php $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/rellax/dist/rellax.min.js'; ?>
+
+<script>
+    var rellax = new Rellax('.rellax', {
+       speed: -2,
+       center: false,
+       round: true
+    });
+</script>
