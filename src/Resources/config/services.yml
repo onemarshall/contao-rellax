@@ -1,3 +1,4 @@
 services:
-  rellax.listener.hooks:
+  aos.listener.hooks:
     class: onemarshall\RellaxBundle\EventListener\HookListener
+    public: true
