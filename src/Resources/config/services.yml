@@ -1,4 +1,4 @@
 services:
   aos.listener.hooks:
     class: onemarshall\RellaxBundle\EventListener\HookListener
-    public: true
+   
