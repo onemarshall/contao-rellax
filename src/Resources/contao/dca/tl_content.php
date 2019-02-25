@@ -5,7 +5,7 @@ foreach ($GLOBALS['TL_DCA']['tl_content']['palettes'] as $key => $palette) {
     if (is_string($key)) {
         $GLOBALS['TL_DCA']['tl_content']['palettes'][$key] = str_replace(
             '{invisible_legend:hide}',
-            '{rellax_legend:hide},rellaxSpeed,rellaxPercentage,rellaxZindex,rellax;{invisible_legend:hide}',
+            '{rellax_legend:hide},rellaxSpeed,rellaxPercentage,rellaxZindex,rellaxRangemin,rellaxRangemax,rellax;{invisible_legend:hide}',
             $palette
         );
     }
@@ -37,6 +37,24 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['rellaxZindex'] = array(
     'eval' => array('tl_class' => 'w50', 'rgxp' => 'digit'),
     'sql' => "varchar(4) NOT NULL default ''"
 );
+
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['rellaxRangemin'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['rellaxRangemin'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => array('tl_class' => 'w50', 'rgxp' => 'digit'),
+    'sql' => "varchar(4) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['rellaxRangemax'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_content']['rellaxRangemax'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => array('tl_class' => 'w50', 'rgxp' => 'digit'),
+    'sql' => "varchar(4) NOT NULL default ''"
+);
+
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['rellax'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_content']['rellax'],

@@ -29,7 +29,9 @@ class HookListener
         $rellax = array(
             'speed' => $objElement->rellaxSpeed,
             'percentage' => $objElement->rellaxPercentage ? $objElement->rellaxPercentage / 100 : $objElement->rellaxPercentage,
-            'zindex' => $objElement->rellaxZindex
+            'zindex' => $objElement->rellaxZindex,
+            'min' => $objElement->rellaxRangemin,
+            'max' => $objElement->rellaxRangemax
         );
 
         $rellax = array_filter($rellax, function ($value) { return $value !== ''; });
